@@ -1,0 +1,6 @@
+export const REGISTER_USER = 'REGISTER_USER';
+
+export const SET_CURRENT_USER = 'SET_CURRENT_USER';
+
+export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
+ 
