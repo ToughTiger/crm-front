@@ -4,12 +4,13 @@ import {Route, Switch} from 'react-router';
 import LoginPage from './containers/auth/loginPage';
 import SignupPage from './containers/auth/signupPage';
 import Index from './components/index/index';
+import dotenv from 'dotenv';
 
+dotenv.config();
 
 const App = ()=> {
 
- 
-    return (
+  return (
       <div>
       <Navbar />
       <Switch>
@@ -18,11 +19,7 @@ const App = ()=> {
          <Route exact path="/signup" component={SignupPage}/>
       </Switch>
       </div>
-     
-        
-     
-     
-    );
+     );
   }
   
 export default (App);

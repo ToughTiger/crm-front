@@ -21,16 +21,16 @@ export function isUserExists (data) {
      }
 }
 
-
 export function userSigninRequest (data) {
     return dispatch => {
-        return axios.post('http://localhost:3000/login', data)
+        return axios.post(`${process.env.REACT_APP_CRM_API_URL}/login`, data)
         .then(res => {
             const token = res.data.token;
             if(window !== undefined) {
                 localStorage.setItem('jwt', token);
                 setAuthorizationToken(token);
                 dispatch(setCurrentUser(jwtDecode(token)));
+               
             }
         })
      }

@@ -24,7 +24,7 @@ import {Redirect} from 'react-router-dom';
        
     }
     onSubmit = (event) => {
-
+        
         const user = {
             email: this.state.email,
             password: this.state.password
@@ -34,8 +34,7 @@ import {Redirect} from 'react-router-dom';
         this.setState({error: {}, isLoading:true});
         this.props.userSigninRequest(user)
         .then(res => {
-            console.log(JSON.stringify(res))
-        this.setState({redirectTo: true, isloading: false})
+         this.setState({redirectTo: true, isloading: false})
         })
         .catch(error => {
             console.log(error)
